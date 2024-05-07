@@ -17,8 +17,8 @@ $timeRangeSec = $timeRange * 86400 * $n
 # Connect to PRTG server
 Connect-PrtgServer $prtgServer (New-Credential $username $passhash) -PassHash -IgnoreSSL
 
-# Get all sensors tagged with YourDeviceTag
-$sensors = Get-Sensor Ping -Tags YourDeviceTag
+# Get all sensors tagged with <yourdevicetag>
+$sensors = Get-Sensor Ping -Tags <yourdevicetag>
 
 # Initialize array and CSV file to store downtime for each sensor
 $sensorDowntime = @('Name,ID,TotalDaysDown,PercentDown') # Headers for output file
